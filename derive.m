@@ -3,7 +3,7 @@ function dZdt = derive(t,Z)
 derivatives_of_z = long_form_comp(Z);
 
 dZdt(1) = Z(2);
-dZdt(2) = Z2d ; % may need to modify this.
+dZdt(2) = z2d(a,b,Z) ; % may need to modify this.
 dZdt(3) = Z(4);
 dZdt(4) = Z(10);
 dZdt(5) = Z(6);

@@ -1,15 +1,11 @@
-
-clear 
-clc
-z1=pi/3;
-z2= 1;  %dummy variable.
-z3=pi/4;
-z5=pi/3;
-a1= 1/sqrt(2);
-b1= 1/sqrt(2);
-
-l2 = 1 ; %dummy variable.
-
+function z2d_z3_value = z2d_z3(a,b,Z)
+z1=Z(1);
+z2=Z(2); 
+z3=Z(3);
+z5=Z(5);
+l2 = Z(8) ;
+a1= a;
+b1= b;
 %z2d_z3 expression starts here--------------------------------------------
 
 
