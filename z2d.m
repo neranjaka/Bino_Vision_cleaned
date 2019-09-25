@@ -1,4 +1,4 @@
-function z2d_value = z2d(a,b,Z)
+function [z2d_value,S] = z2d(a,b,Z)
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 z1=Z(1);
