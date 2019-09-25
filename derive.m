@@ -1,7 +1,7 @@
 function dZdt = derive(t,Z)
 
-a = 0;
-b = 1;
+a = 1/sqrt(2);
+b = 1/sqrt(2);
 
 dZdt(1) = Z(2);
 dZdt(2) = z2d(a,b,Z) ; % may need to modify this.

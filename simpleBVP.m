@@ -2,17 +2,22 @@
 %UNTITLED3 Summary of this function goes here
 %   Detailed explanation goes here
 clear
+close 
 clc
-solinit = bvpinit([0,1],[pi/10,0,0,0,0,0,0,1,0,1,0,1]);
-
-options = bvpset('NMax',1500);
-sol = bvp4c(@derive,@bcs,solinit,options);
+% solinit = bvpinit([0,1],[pi/10,0,0,0,0,0,0,1,0,1,0,1]);
+solinit = bvpinit([0,1],[pi/6, 0, pi/4, 0, pi/3, 1, 1,1,1,1,1,1]);
+% solinit = bvpinit(0:0.01:1,[1, 0, 1, 0, 1, 1, 1,1,1,1,1,1]);
+options = bvpset('NMax',2500);
+sol = bvp5c(@derive,@bcs,solinit, options);
 %sol.x
 %sol.y(1,:)
 
 %plot(sol.y(1,:),sol.y(3,:),'b-x');
 plot(sol.x,sol.y(1,:),'b-x');
-
+hold on
+plot(sol.x,sol.y(3,:),'g-x');
+hold on
+plot(sol.x,sol.y(5,:),'r-x');
 
 %figure
 
